@@ -1,0 +1,17 @@
+﻿@model DepartmentViewModel
+<div class="w-75 mx-auto mb-2">
+    <label for="code" class="mb-2" asp-for="Code"></label>
+    <input asp-for="Code" id="code" placeholder="@Html.DisplayNameFor(D =>D.Code)" class="d-block w-100 rounded px-2">
+    <span asp-validation-for="Code" class="text-danger"></span>
+</div>
+
+<div class="w-75 mx-auto mb-2">
+    <label for="name" class="mb-2" asp-for="Name"></label>
+    <input asp-for="Name" id="name" placeholder="@Html.DisplayNameFor(D =>D.Name)" class="d-block w-100 rounded px-2">
+    <span asp-validation-for="Name" class="text-danger"></span>
+</div>
+
+<div class="w-75 mx-auto mb-2">
+    <label for="date" class="mb-2" asp-for="DateOfCreation"></label>
+    <input asp-for="DateOfCreation" id="date" placeholder="@Html.DisplayNameFor(D =>D.DateOfCreation)" class="d-block w-100 rounded px-2">
+</div>

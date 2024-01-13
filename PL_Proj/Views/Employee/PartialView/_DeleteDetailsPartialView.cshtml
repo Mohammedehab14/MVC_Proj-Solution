@@ -1,0 +1,43 @@
+﻿@model EmployeeViewModel
+
+<div class="w-75 mx-auto mb-2">
+    <img src="~/Files/Images/@Model.ImageName" height="80" width="80" class="rounded" />
+    <input disabled readonly asp-for="@Model.ImageName" hidden>
+</div>
+
+<div class="w-75 mx-auto mb-2">
+    <label class="mb-2" asp-for="@Model.Name"></label>
+    <input disabled readonly asp-for="@Model.Name" placeholder="@Html.DisplayNameFor(D =>D.Name)" class="d-block w-100 rounded px-2">
+</div>
+
+
+<div class="w-75 mx-auto mb-2">
+    <label class="mb-2" asp-for="@Model.Age"></label>
+    <input disabled asp-for="@Model.Age" placeholder="@Html.DisplayNameFor(E =>E.Age)" class="d-block w-100 rounded px-2">
+</div>
+
+<div class="w-75 mx-auto mb-2">
+    <label class="mb-2" asp-for="@Model.Address"></label>
+    <input disabled asp-for="@Model.Address" placeholder="@Html.DisplayNameFor(E =>E.Address)" class="d-block w-100 rounded px-2">
+</div>
+
+<div class="w-75 mx-auto mb-2">
+    <label class="mb-2" asp-for="@Model.Email"></label>
+    <input disabled asp-for="@Model.Email" placeholder="@Html.DisplayNameFor(E =>E.Email)" class="d-block w-100 rounded px-2">
+</div>
+<div class="w-75 mx-auto mb-2">
+    <label class="mb-2" asp-for="@Model.Salary"></label>
+    <input disabled asp-for="@Model.Salary" placeholder="@Html.DisplayNameFor(E =>E.Salary)" class="d-block w-100 rounded px-2">
+</div>
+<div class="w-75 mx-auto mb-2">
+    <label class="mb-2" asp-for="@Model.PhoneNumber"></label>
+    <input disabled asp-for="@Model.PhoneNumber" placeholder="@Html.DisplayNameFor(E =>E.PhoneNumber)" class="d-block w-100 rounded px-2">
+</div>
+<div class="w-75 mx-auto mb-2">
+    <label class="mb-2" asp-for="@Model.HireDate"></label>
+    <input disabled asp-for="@Model.HireDate" placeholder="@Html.DisplayNameFor(E =>E.HireDate)" class="d-block w-100 rounded px-2">
+</div>
+<div class="w-75 mx-auto mb-2">
+    <label class="mb-2" asp-for="@Model.IsActive"></label>
+    <input disabled asp-for="@Model.IsActive" placeholder="@Html.DisplayNameFor(E =>E.IsActive)" class="d-block w-100 rounded px-2">
+</div>

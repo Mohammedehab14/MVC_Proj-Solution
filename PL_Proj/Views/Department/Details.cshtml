@@ -1,0 +1,14 @@
+﻿@model DepartmentViewModel
+@{
+    ViewBag.Title = "Department Details";
+}
+
+<div class="w-50 mx-auto box py-4 rounded my-3">
+    <h2 class="text-center">@Model.Name Department Details</h2>
+    <partial name="PartialView/_DeleteDetailsPartialView" />
+    <div class="w-100 text-center mt-3">
+        <a asp-action="Edit" asp-route-id ="@Model.Id" class="btn btn-dark">Edit</a>
+        <a asp-action="Index" class="btn btn-light">Back To List</a>
+    </div>
+</div>
+

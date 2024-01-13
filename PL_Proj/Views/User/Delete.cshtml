@@ -1,0 +1,41 @@
+﻿@model UserViewModel
+@{
+    ViewData["Title"] = "Delete User";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div asp-validation-summary="All"></div>
+
+<div class="w-50 mx-auto box px-2 py-4 rounded my-3">
+    <h2 class="text-center">Are You Sure To Delete @Model.FName @Model.LName From Table ?</h2>
+
+    <form asp-action="ConfirmDelete" enctype="multipart/form-data">
+
+        <div class="w-75 mx-auto mb-2">
+            <label class="mb-2" asp-for="@Model.Id"></label>
+            <input disabled readonly asp-for="@Model.Id" placeholder="@Html.DisplayNameFor(D =>D.Id)" class="d-block w-100 rounded px-2">
+        </div>
+        <div class="w-75 mx-auto mb-2">
+            <label class="mb-2" asp-for="@Model.FName"></label>
+            <input disabled readonly asp-for="@Model.FName" placeholder="@Html.DisplayNameFor(u =>u.FName)" class="d-block w-100 rounded px-2">
+        </div>
+        <div class="w-75 mx-auto mb-2">
+            <label class="mb-2" asp-for="@Model.LName"></label>
+            <input disabled readonly asp-for="@Model.LName" placeholder="@Html.DisplayNameFor(u =>u.LName)" class="d-block w-100 rounded px-2">
+        </div>
+        <div class="w-75 mx-auto mb-2">
+            <label class="mb-2" asp-for="@Model.Email"></label>
+            <input disabled readonly asp-for="@Model.Email" placeholder="@Html.DisplayNameFor(u =>u.Email)" class="d-block w-100 rounded px-2">
+        </div>
+        <div class="w-75 mx-auto mb-2">
+            <label class="mb-2" asp-for="@Model.PhoneNumber"></label>
+            <input disabled readonly asp-for="@Model.PhoneNumber" placeholder="@Html.DisplayNameFor(u =>u.PhoneNumber)" class="d-block w-100 rounded px-2">
+        </div>
+
+        <div class="w-100 text-center mt-3">
+            <input type="submit" class="btn btn-danger w-50" value="Delete" />
+            <a asp-action="Index" class="btn btn-light">Cancel</a>
+        </div>
+    </form>
+</div>
+

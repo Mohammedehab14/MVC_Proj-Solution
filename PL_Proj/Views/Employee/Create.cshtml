@@ -1,0 +1,33 @@
+﻿@model EmployeeViewModel
+@{
+    ViewBag.Title = "Add Employee";
+}
+
+<div class="w-50 mx-auto box py-4 rounded my-3">
+    <h2 class="text-center">Add New Employee</h2>
+
+    <form asp-action="Create" method="post" enctype="multipart/form-data">
+       
+       <partial name="PartialView/_CreateEditPartialView"/>
+        <div class="w-100 text-center mt-3">
+            <input type="submit" class="btn btn-dark w-50" value="Submit" />
+            <a asp-action="Index" class="btn btn-light">Back To List</a>
+        </div>
+    </form>
+</div>
+
+@section ValidationScriptSection {
+    <partial name="_ValidationScriptsPartial" />
+}
+@section Scripts {
+    <script>
+        $(document).ready(function () {
+            $('#Image').on('change', function () {
+                //console.log($(this).val());
+                var selectedFile = $(this).val().split('\\').pop();
+                $(this).siblings('label').text(selectedFile);
+            });
+        })
+    </script>
+}
+

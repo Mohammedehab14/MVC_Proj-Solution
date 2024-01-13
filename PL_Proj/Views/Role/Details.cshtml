@@ -1,0 +1,27 @@
+﻿@model RoleViewModel
+@{
+    ViewData["Title"] = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="w-50 mx-auto box py-4 rounded my-3">
+    <h2 class="text-center">@Model.RoleName Details</h2>
+
+    <div class="w-75 mx-auto mb-2">
+        <label class="mb-2" asp-for="@Model.Id"></label>
+        <input disabled readonly asp-for="@Model.Id" placeholder="@Html.DisplayNameFor(R =>R.Id)" class="d-block w-100 rounded px-2">
+    </div>
+    
+    <div class="w-75 mx-auto mb-2">
+        <label class="mb-2" asp-for="@Model.RoleName"></label>
+        <input disabled readonly asp-for="@Model.RoleName" placeholder="@Html.DisplayNameFor(R =>R.RoleName)" class="d-block w-100 rounded px-2">
+    </div>
+
+
+    <div class="w-100 text-center mt-3">
+        <a asp-action="Edit" asp-route-id="@Model.Id" class="btn btn-dark">Edit</a>
+        <a asp-action="Index" class="btn btn-light">Back To List</a>
+    </div>
+</div>
+
+

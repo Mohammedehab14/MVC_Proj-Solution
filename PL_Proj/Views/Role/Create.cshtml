@@ -1,0 +1,26 @@
+﻿@model RoleViewModel
+@{
+    ViewData["Title"] = "Create";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="w-50 mx-auto box py-4 rounded my-3">
+    <h2 class="text-center">Create New Department</h2>
+
+    <form asp-action="Create">
+
+        <div class="w-75 mx-auto mb-2">
+            <label class="mb-2" asp-for="RoleName"></label>
+            <input asp-for="RoleName" placeholder="@Html.DisplayNameFor(R =>R.RoleName)" class="d-block w-100 rounded px-2">
+            <span asp-validation-for="RoleName" class="text-danger"></span>
+        </div>
+        <div class="w-100 text-center mt-3">
+            <input type="submit" class="btn btn-dark w-50" value="Submit" />
+            <a asp-action="Index" class="btn btn-light">Back To List</a>
+        </div>
+    </form>
+</div> 
+@section ValidationScriptSection {
+    <partial name="_ValidationScriptsPartial" />
+}
+

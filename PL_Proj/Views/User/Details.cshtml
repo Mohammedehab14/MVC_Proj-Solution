@@ -1,0 +1,38 @@
+﻿@model UserViewModel
+@{
+    ViewData["Title"] = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="w-50 mx-auto box py-4 rounded my-3">
+    <h2 class="text-center">@Model.FName @Model.LName Details</h2>
+
+    <div class="w-75 mx-auto mb-2">
+        <label class="mb-2" asp-for="@Model.Id"></label>
+        <input disabled readonly asp-for="@Model.Id" placeholder="@Html.DisplayNameFor(D =>D.Id)" class="d-block w-100 rounded px-2">
+    </div>
+    <div class="w-75 mx-auto mb-2">
+        <label class="mb-2" asp-for="@Model.FName"></label>
+        <input disabled readonly asp-for="@Model.FName" placeholder="@Html.DisplayNameFor(u =>u.FName)" class="d-block w-100 rounded px-2">
+    </div>
+    <div class="w-75 mx-auto mb-2">
+        <label class="mb-2" asp-for="@Model.LName"></label>
+        <input disabled readonly asp-for="@Model.LName" placeholder="@Html.DisplayNameFor(u =>u.LName)" class="d-block w-100 rounded px-2">
+    </div>
+    <div class="w-75 mx-auto mb-2">
+        <label class="mb-2" asp-for="@Model.Email"></label>
+        <input disabled readonly asp-for="@Model.Email" placeholder="@Html.DisplayNameFor(u =>u.Email)" class="d-block w-100 rounded px-2">
+    </div>
+    <div class="w-75 mx-auto mb-2">
+        <label class="mb-2" asp-for="@Model.PhoneNumber"></label>
+        <input disabled readonly asp-for="@Model.PhoneNumber" placeholder="@Html.DisplayNameFor(u =>u.PhoneNumber)" class="d-block w-100 rounded px-2">
+    </div>
+
+
+    <div class="w-100 text-center mt-3">
+        <a asp-action="Edit" asp-route-id="@Model.Id" class="btn btn-dark">Edit</a>
+        <a asp-action="Index" class="btn btn-light">Back To List</a>
+    </div>
+</div>
+
+

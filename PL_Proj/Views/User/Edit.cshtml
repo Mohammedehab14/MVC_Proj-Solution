@@ -1,0 +1,36 @@
+﻿@model UserViewModel
+@{
+    ViewData["Title"] = "Edit User";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="w-50 mx-auto box p-4 rounded my-3">
+    <h2 class="text-center">Edit @Model.FName @Model.LName User Details</h2>
+
+    <form asp-action="Edit">
+
+        <div class="w-75 mx-auto mb-3">
+            <label class="mb-2" asp-for="FName"></label>
+            <input asp-for="FName" placeholder="@Html.DisplayNameFor(u =>u.FName)" class="d-block w-100 rounded px-2">
+            <span asp-validation-for="FName" class="text-danger"></span>
+        </div>
+        <div class="w-75 mx-auto mb-3">
+            <label class="mb-2" asp-for="LName"></label>
+            <input asp-for="LName" placeholder="@Html.DisplayNameFor(u =>u.LName)" class="d-block w-100 rounded px-2">
+            <span asp-validation-for="LName" class="text-danger"></span>
+        </div>
+        <div class="w-75 mx-auto mb-3">
+            <label class="mb-2" asp-for="PhoneNumber"></label>
+            <input asp-for="PhoneNumber" placeholder="@Html.DisplayNameFor(u =>u.PhoneNumber)" class="d-block w-100 rounded px-2">
+            <span asp-validation-for="PhoneNumber" class="text-danger"></span>
+        </div>
+        <div class="w-100 text-center mt-3">
+            <input type="submit" class="btn btn-dark w-50" value="Save" />
+            <a asp-action="Index" class="btn btn-light">Back To List</a>
+        </div>
+    </form>
+</div>
+@section ValidationScriptSection {
+    <partial name="_ValidationScriptsPartial" />
+}
+

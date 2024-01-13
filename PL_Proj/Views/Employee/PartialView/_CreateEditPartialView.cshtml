@@ -1,0 +1,57 @@
+﻿
+@model EmployeeViewModel
+@{
+    var departments = new SelectList(await ViewBag.Departments, "Id", "Name");
+}
+<div class="w-75 mx-auto mb-3">
+    <label for="Name" class="mb-2" asp-for="Name"></label>
+    <input asp-for="Name" id="Name" placeholder="@Html.DisplayNameFor(E =>E.Name)" class="d-block w-100 rounded px-2">
+    <span asp-validation-for="Name" class="text-danger"></span>
+</div>
+
+<div class="w-75 mx-auto mb-2 custom-file">
+    <input type="file" class="d-block w-100 rounded px-2 custom-file-input" asp-for="Image" />
+    <label class="text-muted mb-2 custom-file-label" asp-for="Image"></label>
+</div>
+
+<div class="w-75 mx-auto mb-2">
+    <label for="Age" class="mb-2" asp-for="Age"></label>
+    <input asp-for="Age" id="Age" placeholder="@Html.DisplayNameFor(E =>E.Age)" class="d-block w-100 rounded px-2">
+    <span asp-validation-for="Age" class="text-danger"></span>
+</div>
+<div class="w-75 mx-auto mb-2">
+    <label for="Address" class="mb-2" asp-for="Address"></label>
+    <input asp-for="Address" id="Address" placeholder="@Html.DisplayNameFor(E =>E.Address)" class="d-block w-100 rounded px-2">
+    <span asp-validation-for="Address" class="text-danger"></span>
+
+</div>
+<div class="w-75 mx-auto mb-2">
+    <label for="Email" class="mb-2" asp-for="Email"></label>
+    <input asp-for="Email" id="Email" placeholder="@Html.DisplayNameFor(E =>E.Email)" class="d-block w-100 rounded px-2">
+    <span asp-validation-for="Email" class="text-danger"></span>
+
+</div>
+<div class="w-75 mx-auto mb-2">
+    <label for="Salary" class="mb-2" asp-for="Salary"></label>
+    <input asp-for="Salary" id="Salary" placeholder="@Html.DisplayNameFor(E =>E.Salary)" class="d-block w-100 rounded px-2">
+</div>
+<div class="w-75 mx-auto mb-2">
+    <label for="Salary" class="mb-2" asp-for="Department"></label>
+    <select class="d-block w-100 rounded px-2" asp-items="@departments" asp-for="DeptId">
+        <option value="@null"></option>
+    </select>
+</div>
+<div class="w-75 mx-auto mb-2">
+    <label for="PhoneNumber" class="mb-2" asp-for="PhoneNumber"></label>
+    <input asp-for="PhoneNumber" id="PhoneNumber" placeholder="@Html.DisplayNameFor(E =>E.PhoneNumber)" class="d-block w-100 rounded px-2">
+</div>
+<div class="w-75 mx-auto mb-2">
+    <label for="HireDate" class="mb-2" asp-for="HireDate"></label>
+    <input asp-for="HireDate" id="HireDate" placeholder="@Html.DisplayNameFor(E =>E.HireDate)" class="d-block w-100 rounded px-2">
+</div>
+<div class="w-75 mx-auto mb-2">
+    <label for="IsActive" class="mb-2" asp-for="IsActive"></label>
+    <input asp-for="IsActive" id="IsActive" placeholder="@Html.DisplayNameFor(E =>E.IsActive)" class="d-block w-100 rounded px-2">
+</div>
+
+
